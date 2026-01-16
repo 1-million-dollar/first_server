@@ -8,7 +8,10 @@ app.get('/', (req, res) => {
 });
 
 app.get('/home', (req, res) => {
-    res.send('This is home page');
+    res.json({
+    message: "Welcome to your dashboard!",
+    data: ["Project A", "Project B"]
+  });
 })
 
 app.listen(PORT, () => {
